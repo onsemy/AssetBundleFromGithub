@@ -6,10 +6,23 @@ using UnityEngine;
 public class Test : MonoBehaviour
 {
     private AssetBundleManager _assetBundleManager;
+
+    private void Awake()
+    {
+        if (Caching.ClearCache())
+        {
+            Debug.Log("Cleaned!");
+        }
+        else
+        {
+            Debug.Log("No more clean");
+        }
+    }
+    
     private IEnumerator OnClickStart()
     {
         _assetBundleManager = new AssetBundleManager();
-        yield return _assetBundleManager.PrepareDownload("https://onsemy.github.io/AssetBundles/Android/", "Android");
+        yield return _assetBundleManager.PrepareDownload("https://onsemy.github.io/AssetBundleFromGithubPage/Android/", "Android");
         Debug.Log($"Downloading AssetBundle Size: {_assetBundleManager.assetBundleTotalSize}");
         yield return _assetBundleManager.DownloadAllAssetBundle();
         yield return _assetBundleManager.PreloadAllAssetBundle();
