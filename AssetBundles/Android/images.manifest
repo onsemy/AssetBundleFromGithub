@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 217463116
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 710b9842f49e15ed1296ff24da40627d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundles/images/home.gif
+- Assets/AssetBundles/images/404.jpg
+- Assets/AssetBundles/images/404.gif
+- Assets/AssetBundles/images/home.jpg
+Dependencies: []
